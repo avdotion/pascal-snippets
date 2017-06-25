@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+var
+	${1:variableName}: ${2:integer}${3: = }
+]]></content>
+	<description>declaration</description>
+    <tabTrigger>var</tabTrigger>
+    <scope>source.pascal</scope> 
+</snippet>

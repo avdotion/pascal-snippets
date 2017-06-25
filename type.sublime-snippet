@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+type
+	${1:typeName} = ${3:integer}
+]]></content>
+	<description>declaration</description>
+    <tabTrigger>type</tabTrigger>
+    <scope>source.pascal</scope>
+</snippet>

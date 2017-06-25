@@ -1,0 +1,35 @@
+{
+    "cmd": ["fpc", "-S2", "${file}"],
+    "file_regex": "^(.*)\\(([0-9]+),([0-9]+)\\) (Error|Fatal): (.*)$",
+    "working_dir": "${file_path}",
+    "selector": "source.pascal",
+    "osx": {
+        "path": "/usr/local/bin:/usr/bin:/bin:${path}"
+    },
+    "variants": [
+    {
+        "name": "Run",
+        "shell": true,
+        "linux": {
+            "cmd": ["gnome-terminal -e 'bash -c \"${file_path}/${file_base_name};echo;echo;  echo Press ENTER to continue; read line;exit; exec bash\"'"]
+        },
+        "osx": {
+            "shell_cmd": "open -a Terminal.app ${file_path}/${file_base_name} && clear",
+        },
+        "windows": {
+            "cmd": ["start", "cmd", "/c", "chcp 866 && CLS && $file_base_name.exe & echo. & echo. & pause"]
+        }
+    },
+    {
+        "name": "Build and Run",
+        "shell": true,
+        "windows": {
+            "cmd": ["fpc", "-S2", "${file}", "&&", "start", "cmd", "/c", "chcp 866 && CLS && $file_base_name.exe & echo. & echo. & pause"]
+        },
+        "osx": {
+            "shell_cmd": "fpc ${file_base_name} && open -a Terminal.app ${file_path}/${file_base_name} && clear",
+        },
+
+    }
+    ]
+}

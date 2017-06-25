@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+const
+	${1:CONST_NAME} = ${2:value}${0}
+]]></content>
+	<description>declaration</description>
+    <tabTrigger>const</tabTrigger>
+    <scope>source.pascal</scope> 
+</snippet>

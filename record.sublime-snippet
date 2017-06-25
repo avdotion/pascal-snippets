@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+record
+	${1:fieldName} : ${2:integer};$0
+end
+]]></content>
+	<description>declaration</description>
+    <tabTrigger>record</tabTrigger>
+    <scope>source.pascal</scope>
+</snippet>

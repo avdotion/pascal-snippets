@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+label
+	${1:label_name}
+]]></content>
+	<description>declaration</description>
+    <tabTrigger>label</tabTrigger>
+    <scope>source.pascal</scope> 
+</snippet>

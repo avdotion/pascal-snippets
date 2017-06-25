@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+repeat
+	$2
+until ${1:condition}${0}
+]]></content>
+	<description>loop</description>
+    <tabTrigger>repeat</tabTrigger>
+    <scope>source.pascal</scope> 
+</snippet>

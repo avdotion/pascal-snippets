@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snippet>
+    <content><![CDATA[
+if ${1:expression} then${0: }
+]]></content>
+	<description>statement</description>
+    <tabTrigger>if</tabTrigger>
+    <scope>source.pascal</scope> 
+</snippet>

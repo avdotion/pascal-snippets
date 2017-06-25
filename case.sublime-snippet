@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+case ${1:expression} of
+	${2:value}: ${3:statement}
+end
+]]></content>
+	<description>statement</description>
+    <tabTrigger>case</tabTrigger>
+    <scope>source.pascal</scope> 
+</snippet>
