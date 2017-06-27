@@ -1,12 +1,8 @@
 <snippet>
     <content><![CDATA[
-program ${1:ProgramName};
-	$2
-begin
-	$3
-end.
+function ${1:functionName}(${2:args}): ${3:Integer}
 ]]></content>
 	<description>declaration</description>
-    <tabTrigger>program</tabTrigger>
+    <tabTrigger>function</tabTrigger>
     <scope>source.pascal</scope>
 </snippet>

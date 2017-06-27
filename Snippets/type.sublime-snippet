@@ -1,8 +1,9 @@
 <snippet>
     <content><![CDATA[
-function ${1:functionName}(${2:args}): ${3:integer}
+type
+	${1:typeName} = ${3:Integer}
 ]]></content>
 	<description>declaration</description>
-    <tabTrigger>function</tabTrigger>
+    <tabTrigger>type</tabTrigger>
     <scope>source.pascal</scope>
 </snippet>

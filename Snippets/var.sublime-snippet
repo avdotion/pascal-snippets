@@ -1,7 +1,7 @@
 <snippet>
     <content><![CDATA[
 var
-	${1:variableName}: ${2:integer}${3: = }
+	${1:variableName}: ${2:Integer}
 ]]></content>
 	<description>declaration</description>
     <tabTrigger>var</tabTrigger>

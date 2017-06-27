@@ -1,9 +1,10 @@
 <snippet>
     <content><![CDATA[
-type
-	${1:typeName} = ${3:integer}
+record
+	${1:fieldName} : ${2:Integer};$0
+end
 ]]></content>
 	<description>declaration</description>
-    <tabTrigger>type</tabTrigger>
+    <tabTrigger>record</tabTrigger>
     <scope>source.pascal</scope>
 </snippet>

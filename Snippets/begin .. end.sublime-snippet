@@ -2,7 +2,7 @@
 <snippet>
     <content><![CDATA[
 begin
-	${1}
+	${0}
 end
 ]]></content>
 	<description>brackets</description>
