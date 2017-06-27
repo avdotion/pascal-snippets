@@ -5,6 +5,7 @@ file_extensions:
   - pascal
   - p
   - pp
+  - pas
 scope: source.pascal
 
 variables:
@@ -24,10 +25,12 @@ contexts:
         2: entity.name.function.prototype.pascal
     - match: \b(?i:(function|procedure))\b\s+(\w+(\.\w+)?)
       scope: meta.function.pascal
+      captures:
+        1: storage.type.function.pascal
+        2: entity.name.function.pascal
 
     - match: \b({{basic_types}})\b
       scope: storage.type.pascal
-
       captures:
         1: storage.type.function.pascal
         2: entity.name.function.pascal
@@ -97,6 +100,8 @@ contexts:
             0: punctuation.definition.string.end.pascal
           pop: true
     - include: function-call
+    - include: constants
+    - include: binary-operators
 
   function-call:
     - match: (?={{identifier}}\s*\()
@@ -112,3 +117,68 @@ contexts:
               scope: meta.function-call.pascal meta.group.pascal punctuation.section.group.end.pascal
               pop: true
             - include: expressions
+  constants:
+    - match: \btrue\b
+      scope: constant.language.boolean.true.pascal
+    - match: \bfalse\b
+      scope: constant.language.boolean.false.pascal
+
+  after-operator:
+    # Prevent matching "{" as a block, but instead always treat as an object
+    # literal. This is needed since in the "statements" context, a "{" starts
+    # an anonymous block, not an object literal.
+    - match: '(?=\{)'
+      push:
+        - include: object-literal
+        - match: '(?=.|\n)'
+          pop: true
+    # When following an operator, a single / is the beginning of a regexp,
+    # not a division operator
+    - match: '(?=[\S])'
+      pop: true
+
+  binary-operators:
+    - match: \bnew\b
+      scope: keyword.operator.new.pascal
+    - match: \b(delete|instanceof)\b
+      scope: keyword.operator.pascal
+    - match: \b(in|of|typeof|void)\b
+      scope: keyword.operator.pascal
+      push: after-operator
+    - match: '&&|\|\|'
+      scope: keyword.operator.logical.pascal
+      push: after-operator
+    - match: '=(?![=>])'
+      scope: keyword.operator.assignment.pascal
+      push: after-operator
+    - match: |-
+        (?x)
+        <<   | # bitwise-shift   left-to-right   both
+        >>     # bitwise-shift   left-to-right   both
+      scope: keyword.operator.bitwise.pascal
+      push: after-operator
+    - match: |-
+        (?x)
+        <=   | # relational      left-to-right   both
+        >=   | # relational      left-to-right   both
+        <    | # relational      left-to-right   both
+        >      # relational      left-to-right   both
+      scope: keyword.operator.relational.pascal
+      push: after-operator
+    - match: |-
+        (?x)
+        =    | # equality        left-to-right   both
+        <>     # equality        left-to-right   both
+      scope: keyword.operator.comparison.pascal
+      push: after-operator
+    - match: |-
+        (?x)
+        /    | # division        left-to-right   both
+        \*   | # multiplication  left-to-right   both
+        \+   | # addition        left-to-right   both
+        -      # subtraction     left-to-right   both
+      scope: keyword.operator.arithmetic.pascal
+      push: after-operator
+    - match: '\?|:'
+      scope: keyword.operator.ternary.pascal
+      push: after-operator
