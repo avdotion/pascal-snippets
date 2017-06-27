@@ -168,6 +168,7 @@ contexts:
     - match: |-
         (?x)
         =    | # equality        left-to-right   both
+        :=   | # equality        left-to-right   both
         <>     # equality        left-to-right   both
       scope: keyword.operator.comparison.pascal
       push: after-operator
@@ -179,6 +180,4 @@ contexts:
         -      # subtraction     left-to-right   both
       scope: keyword.operator.arithmetic.pascal
       push: after-operator
-    - match: '\?|:'
-      scope: keyword.operator.ternary.pascal
-      push: after-operator
+ 
