@@ -16,7 +16,7 @@ Type Package Control: Install Package and press enter. Then search for `Object P
 ## Cyrillic Support
 *Make sure that your OS is Windows.*
 To enable to code with cyrillic support follow this steps:
-1. Open one `.pas` or `.pascal` file and go to the `Preferences ⇨ Setting - Syntax Specific`.
+1. Open one `.pas` or `.pascal` file and go to the `Preferences ⇨ Settings - Syntax Specific`.
 2. If the windows title does not ends with "Object Pascal.sublime-settings", go to the step 1.
 3. Copy&Paste this lines:
 ```JSON
