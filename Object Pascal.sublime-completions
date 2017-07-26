@@ -76,6 +76,7 @@
 		{ "trigger": "round", "contents": "round($0)" },
 		{ "trigger": "seekEOF", "contents": "seekEOF(${0:file})" },
 		{ "trigger": "seekEOLn", "contents": "seekEOLn(${0:file})" },
+		{ "trigger": "setTextBuf", "contents": "SetLength(${1:array}, ${2:n})" },
 		{ "trigger": "setTextBuf", "contents": "setTextBuf(${1:file}, ${2:buf})" },
 		{ "trigger": "sin", "contents": "sin($0)" },
 		{ "trigger": "sqr", "contents": "sqr($0)" },
