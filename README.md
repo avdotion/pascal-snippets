@@ -21,8 +21,8 @@ To enable to code with cyrillic support follow this steps:
 3. Copy&Paste this lines:
 ```JSON
 {
-	"default_encoding": "Cyrillic (Windows 866)",
-	"fallback_encoding": "Cyrillic (Windows 866)",
+	"default_encoding": "Cyrillic (Windows 1251)",
+	"fallback_encoding": "Cyrillic (Windows 1251)",
 }
 ```
 4. Save this setting-file.
