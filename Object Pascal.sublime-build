@@ -17,14 +17,14 @@
             "shell_cmd": "open -a Terminal.app ${file_path}/${file_base_name} && clear",
         },
         "windows": {
-            "cmd": ["start", "cmd", "/c", "chcp 866 && CLS && $file_base_name.exe & echo. & echo. & pause"]
+            "cmd": ["start", "cmd", "/c", "chcp 1251 && CLS && $file_base_name.exe & echo. & echo. & pause"]
         }
     },
     {
         "name": "Build and Run",
         "shell": true,
         "windows": {
-            "cmd": ["fpc", "-S2", "${file}", "&&", "start", "cmd", "/c", "chcp 866 && CLS && $file_base_name.exe & echo. & echo. & pause"]
+            "cmd": ["fpc", "-S2", "${file}", "&&", "start", "cmd", "/c", "chcp 1251 && CLS && $file_base_name.exe & echo. & echo. & pause"]
         },
         "osx": {
             "shell_cmd": "fpc ${file_base_name} && open -a Terminal.app ${file_path}/${file_base_name} && clear",
