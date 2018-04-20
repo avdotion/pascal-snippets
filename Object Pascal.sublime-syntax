@@ -11,7 +11,7 @@ scope: source.pascal
 
 variables:
   identifier: '\b[[:alpha:]_][[:alnum:]_]*\b'
-  basic_types: 'Byte|Shortint|Smallint|Word|Integer|Cardinal|Longint|Longword|Int64|QWord|Real|Single|Double|Extended|Comp|Currency|Boolean|ByteBool|WordBool|LongBool|Char|WideChar|PChar|String|AnsiString|Variant'
+  basic_types: 'Byte|Shortint|Smallint|Word|DWord|Integer|Cardinal|Longint|Longword|Int64|QWord|Real|Single|Double|Extended|Comp|Currency|Boolean|ByteBool|WordBool|LongBool|Char|WideChar|PChar|String|AnsiString|Variant'
   control_keywords: 'absolute|abstract|all|and|and_then|array|as|asm|attribute|begin|bindable|break|case|class|const|constructor|countinue|destructor|div|do|downto|else|end|except|exit|export|exports|external|far|file|finalization|finally|for|forward|goto|if|implementation|import|in|inherited|initialization|interface|interrupt|is|label|library|mod|module|name|near|nil|not|object|of|only|operator|or|or_else|otherwise|overload|packed|pow|private|program|property|protected|public|published|qualified|record|repeat|resident|restricted|segment|set|shl|shr|specialize|then|to|try|type|unit|until|uses|value|var|view|virtual|while|with|xor'
   functions: 'IOResult|abs|append|arctan|assign|BlockRead|BlockWrite|chr|close|clrscr|concat|copy|cos|dec|delete|eof|eoln|erase|exp|filePos|fileSize|flush|frac|gotoxy|inc|insert|int|length|ln|lowercase|odd|ord|pi|pos|pred|random|randomize|read|readkey|readln|rename|reset|rewrite|round|seekEOF|seekEOLn|SetLength|setTextBuf|sin|sqr|sqrt|str|succ|textbackground|textcolor|trunc|truncate|upcase|val|write|writeln'
 
