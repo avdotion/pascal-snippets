@@ -8,6 +8,7 @@
 		{ "trigger": "Shortint", "contents": "Shortint" },
 		{ "trigger": "Smallint", "contents": "Smallint" },
 		{ "trigger": "Word", "contents": "Word" },
+		{ "trigger": "DWord", "contents": "DWord" },
 		{ "trigger": "Integer", "contents": "Integer" },
 		{ "trigger": "Cardinal", "contents": "Cardinal" },
 		{ "trigger": "Longint", "contents": "Longint" },
