@@ -16,10 +16,9 @@ Press `⌘/Ctrl + ⇧ + P` to open the command palette.
 Type `Package Control: Install Package` and press enter. Then search for `Object Pascal`.
 
 ## Cyrillic Support
-*Make sure that your OS is Windows.*
 To enable to code with cyrillic support follow this steps:
 1. Open one `.pas` or `.pascal` file and go to the `Preferences ⇨ Settings - Syntax Specific`.
-2. If the windows title does not ends with "Object Pascal.sublime-settings", go to the step 1.
+2. If the window title does not end with "Object Pascal.sublime-settings", go to the step 1.
 3. Copy&Paste this lines:
 ```JSON
 {
@@ -32,6 +31,6 @@ To enable to code with cyrillic support follow this steps:
 Try to compile this file:
 ```
 begin
-write('Привет, мир!')
+	write('Привет, мир!')
 end.
 ```
