@@ -3,7 +3,7 @@
 **[Инструкция на русском](http://telegra.ph/Ustanovka-Sublime-Text-dlya-polnocennoj-razrabotki-na-Pascal-06-25) и её [зеркало](http://tgraph.io/Ustanovka-Sublime-Text-dlya-polnocennoj-razrabotki-na-Pascal-06-25)**
 
 ## Features
-* Syntax support (package knows 26 data types and 62 functions)
+* Syntax support (package knows 27 data types and 62 functions)
 * Intelligent Snippets
 * Compilation in Windows, macOS and Linux-based OS (via [Free Pascal Compiler](https://www.freepascal.org))
 * Cyrillic support in Windows
