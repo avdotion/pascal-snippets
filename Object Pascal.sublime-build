@@ -30,7 +30,7 @@
             "cmd": ["fpc", "-S2", "${file}", "&&", "start", "cmd", "/c", "chcp 1251 && CLS && $file_base_name.exe & echo. & echo. & pause"]
         },
         "osx": {
-            "shell_cmd": "fpc -S2 '${file_base_name}' && open -a Terminal.app '${file_path}/${file_base_name}' && clear",
+            "shell_cmd": "fpc -S2 '${file}' && open -a Terminal.app '${file_path}/${file_base_name}' && clear",
         },
 
     }
